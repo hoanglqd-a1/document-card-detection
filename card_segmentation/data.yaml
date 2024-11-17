@@ -1,0 +1,6 @@
+path: yolo_format_dataset/train
+train: train
+val: val
+
+names:
+    0: card

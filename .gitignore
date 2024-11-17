@@ -8,3 +8,8 @@
 /card_segmentation/logs
 /card_segmentation/utils/__pycache__
 /card_segmentation/__pycache__
+/card_segmentation/datasets
+/card_segmentation/yolo_pretrained
+/card_segmentation/runs
+
+*.pt
