@@ -11,5 +11,9 @@
 /card_segmentation/datasets
 /card_segmentation/yolo_pretrained
 /card_segmentation/runs
+/card_segmentation/yolo_model
+/card_segmentation/output
+/prediction
+/data
 
 *.pt

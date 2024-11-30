@@ -7,7 +7,7 @@ import pathlib
 import torch
 
 import models
-from utils import image
+from card_segmentation.utils import processing
 
 parser = argparse.ArgumentParser(description='Semantic segmentation of Card in Image.')
 parser.add_argument('input', type=str, help='Image (with Card) Input file')
@@ -53,7 +53,7 @@ def main():
             model.eval()
 
             print('Load image... ', INPUT_FILE)
-            img, h, w = image.load_image(INPUT_FILE)
+            img, h, w = processing.load_image(INPUT_FILE)
 
             print('Prediction...')
             output_image = predict_image(model, img)
@@ -63,7 +63,7 @@ def main():
             cv2.imwrite(OUTPUT_MASK, mask_image)
             print('Cut it out...')
             raw_image = cv2.imread(INPUT_FILE)
-            warped = image.extract_idcard(raw_image, mask_image)
+            warped = processing.extract_idcard(raw_image, mask_image)
             warped = cv2.cvtColor(warped, cv2.COLOR_BGR2RGB)
             cv2.imwrite(OUTPUT_FILE, warped)
 
