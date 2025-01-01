@@ -54,6 +54,3 @@ python train.py --resumeTraining=True
 ```
 python test.py test/sample1.png --output_mask=test/output_mask.png --output_prediction=test/output_pred.png --model=./pretrained/model_final.pt
 ```
-
-## .IPYNB
-Ngoài ra, có thể chạy thử các file .ipynb để trực quan hóa quá trình

@@ -15,5 +15,6 @@
 /card_segmentation/output
 /prediction
 /data
+/fake_template
 
 *.pt

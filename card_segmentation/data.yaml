@@ -1,4 +1,4 @@
-path: yolo_format_dataset/train
+path: C:/Dataset/card/datasets/
 train: train
 val: val
 
