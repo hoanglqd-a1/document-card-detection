@@ -1,20 +1,7 @@
-/card_segmentation/pretrained/
-/card_segmentation/dataset
-/card_segmentation/my_test
-/card_segmentation/noisy_bg_test
-/card_segmentation/real_test
-/card_segmentation/simple_test
-/card_segmentation/test
-/card_segmentation/logs
-/card_segmentation/utils/__pycache__
-/card_segmentation/__pycache__
-/card_segmentation/datasets
-/card_segmentation/yolo_pretrained
-/card_segmentation/runs
-/card_segmentation/yolo_model
-/card_segmentation/output
-/prediction
-/data
-/fake_template
+/card_segmentation
+/localization/runs
+/localization/yolo_model
+/localization/experiment.ipynb
+**/__pycache__/
 
 *.pt

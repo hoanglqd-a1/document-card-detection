@@ -1,0 +1,6 @@
+path: D:/datasets/document_card
+train: train
+val: val
+
+names:
+    0: card
