@@ -29,7 +29,7 @@ def read_image(img, annot):
     x = np.array(annot['regions'][1]["shape_attributes"]["all_points_x"], dtype=np.int32)
     y = np.array(annot['regions'][1]["shape_attributes"]["all_points_y"], dtype=np.int32)
     coords = np.column_stack((x,y))
-    image = image.resize((image.size[0] // 2, image.size[1] // 2))
+    image = image.resize((540,  960))
     normalized_coords = coords.astype(np.float32)
     normalized_coords[:, 0] = normalized_coords[:, 0] / orig_shape[0]
     normalized_coords[:, 1] = normalized_coords[:, 1] / orig_shape[1]

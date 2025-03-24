@@ -45,32 +45,19 @@ def four_point_transform(image, pts):
     warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
     return warped
 
-def check_validity(points, image_size):
-    for i in range(4):
-        for j in range(i+1, 4):
-            if abs(points[i][0][0] - points[j][0][0]) < image_size[0]//8 and abs(points[i][0][1] - points[j][0][1]) < image_size[1]//8:
-                return False
+# def check_validity(points, image_size):
+#     for i in range(4):
+#         for j in range(i+1, 4):
+#             if abs(points[i][0][0] - points[j][0][0]) < image_size[0]//8 and abs(points[i][0][1] - points[j][0][1]) < image_size[1]//8:
+#                 return False
             
-    return True
+#     return True
 
 def find_contours(image, thickness=3):
     contours, hierarchy = cv2.findContours(image.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     contour_image = np.zeros_like(image)
     cv2.drawContours(contour_image, contours, -1, 255, thickness)
     return contour_image, contours, hierarchy
-
-
-def extract_idcard(raw_image, mask_image):
-    validScreenCntList = get_corners(raw_image, mask_image)
-
-    if len(validScreenCntList) == 0:
-        return None
-    
-    # assert len(screenCntList) == 1
-    new_points = np.array([[points[0][0], points[0][1]] for points in validScreenCntList[0]])
-
-    warped = four_point_transform(raw_image, new_points)
-    return cv2.cvtColor(warped, cv2.COLOR_BGR2RGB)
 
 def get_corners(raw_image, mask_image):
     _, contours, _ = find_contours(mask_image)

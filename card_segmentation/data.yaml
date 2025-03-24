@@ -1,6 +1,0 @@
-path: C:/Dataset/card/datasets/
-train: train
-val: val
-
-names:
-    0: card

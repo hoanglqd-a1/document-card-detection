@@ -2,3 +2,7 @@ ultralytics
 matplotlib
 opencv-python
 Pillow
+tensorboard
+torch=2.5.0+cu118
+torchaudio=2.5.0+118
+wget

@@ -1,5 +1,0 @@
-matplotlib
-wget
-tensorboard
-opencv-python
-utility

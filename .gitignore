@@ -1,4 +1,3 @@
-/card_segmentation
 /localization/runs
 /localization/yolo_model
 /localization/experiment.ipynb
